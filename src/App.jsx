@@ -1,6 +1,6 @@
 import { Route, Routes } from "react-router-dom";
-import Login from "./pages/Login";
-import Register from './pages/Register';
+import Login from "./pages/Auth/Login";
+import Register from './pages/Auth/Register';
 import Home from './pages/Home';
 import Recepy from "./pages/Recepy";
 import Fridge from './pages/Fridge';
@@ -9,7 +9,7 @@ import Header from "./components/Header";
 function App() {
   return (
     <div className="app">
-      <Header />
+      {/* <Header /> */}
       <div className="container">
         <Routes>
           <Route path="/" element={<Home />} />
