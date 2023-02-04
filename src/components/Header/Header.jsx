@@ -6,7 +6,7 @@ import "./Header.css";
 
 
 const Header = () => {
-  const [user, setUser] = useState(null);
+  const [user, setUser] = useState(true);
 
   return (
     <header className="header">

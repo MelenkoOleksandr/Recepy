@@ -3,7 +3,7 @@ import Login from "./pages/Auth/Login";
 import Register from "./pages/Auth/Register";
 import Home from "./pages/Home/Home";
 import Recipy from "./pages/Recipy";
-import Fridge from "./pages/Fridge";
+import Fridge from "./pages/Fridge/Fridge";
 import Header from "./components/Header/Header";
 
 function App() {
