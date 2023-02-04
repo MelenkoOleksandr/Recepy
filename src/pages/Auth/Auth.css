@@ -1,4 +1,8 @@
 .auth-form {
+    background-color: #fff;
+    position: absolute;
+    top: 0;
+    left: 0;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -7,18 +11,51 @@
     overflow: hidden;
 }
 
-.auth-form .auth-left, .auth-form .auth-right {
+.auth-form .auth-left,
+.auth-form .auth-right {
+    position: relative;
     flex: 1;
     height: 100%;
 }
 
-.auth-form .auth-left .auth-img, .auth-form .auth-right .auth-img {
+.auth-back {
+    z-index: 5;
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 24px;
+    font-weight: 700;
+    padding: 10px 20px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.auth-back.right {
+    right: 0;
+    left: auto;
+}
+
+.auth-form .auth-left .auth-img,
+.auth-form .auth-right .auth-img {
     height: 100%;
     width: 100%;
     object-fit: cover;
+    position: relative;
 }
 
-.auth-form .auth-right, .auth-form .auth-left{
+.auth-form .auth-left.img-container::after,
+.auth-form .auth-right.img-container::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.auth-form .auth-right,
+.auth-form .auth-left {
     flex: 1;
     height: 100%;
     display: flex;

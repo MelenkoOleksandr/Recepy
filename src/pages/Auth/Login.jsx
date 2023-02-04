@@ -15,12 +15,15 @@ const Login = () => {
 
   return (
     <form className="auth-form" onSubmit={handleSubmit}>
-      <div className="auth-left">
+      <div className="auth-left img-container">
         <img
           className="auth-img"
           src="https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=780&q=80"
           alt=""
         />
+        <Link to="/" className="auth-back">
+          Home
+        </Link>
       </div>
       <div className="auth-right">
         <h2 className="auth-title">Login</h2>

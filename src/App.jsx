@@ -1,8 +1,8 @@
 import { Route, Routes } from "react-router-dom";
-import Login from "./pages/Login/Login";
-import Register from "./pages/Register/Register";
+import Login from "./pages/Auth/Login";
+import Register from "./pages/Auth/Register";
 import Home from "./pages/Home/Home";
-import Recipy from "./pages/Recipy/Recipy";
+import Recipy from "./pages/Recipy";
 import Fridge from "./pages/Fridge";
 import Header from "./components/Header/Header";
 
