@@ -1,0 +1,80 @@
+.recipy-filters {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.search {
+    max-width: 600px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #ccc;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+.search>input {
+    outline: none;
+    border: none;
+    width: 100%;
+}
+
+.search>svg {
+    cursor: pointer;
+}
+
+.filters {
+    max-width: 600px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.category-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.category-wrapper>select {
+    outline: none;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+}
+
+.category-wrapper>label {
+    font-size: 18px;
+    font-weight: 500;
+    color: #000;
+}
+
+.filter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.filter>label {
+    font-size: 18px;
+    font-weight: 500;
+    color: #000;
+}
+
+.filter>input[type="checkbox"] {
+    cursor: pointer;
+    width: 15px;
+    height: 15px;
+}

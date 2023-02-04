@@ -1,24 +1,24 @@
 import { Route, Routes } from "react-router-dom";
 import Login from "./pages/Login";
 import Register from './pages/Register';
-import Home from './pages/Home';
-import Recepy from "./pages/Recepy";
+import Home from './pages/Home/Home';
+import Recipy from "./pages/Recipy";
 import Fridge from './pages/Fridge';
-import Header from "./components/Header";
+import Header from "./components/Header/Header";
 
 function App() {
   return (
     <div className="app">
       <Header />
-      <div className="container">
+      <main className="container">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
           <Route path="/fridge" element={<Fridge />} />
-          <Route path="/recepy" element={<Recepy />} />
+          <Route path="/recipy" element={<Recipy />} />
         </Routes>
-      </div>
+      </main>
     </div>
   );
 }
