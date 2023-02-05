@@ -37,8 +37,8 @@
       "category": "Dinner",
       "title": "Chicken Soup",
       "description": "Chicken soup is a soup made with chicken as the primary ingredient. It is usually seasoned with salt, pepper, and other spices. Chicken soup is a staple food in many cultures, and is often served as a first course in formal dinners. It is also a common home remedy for colds and flu.",
-      "cooking_time": "60",
-      "difficulty": 2,
+      "cooking_time": 60,
+      "complexity": 2,
       "ingredients": [
         {
           "product_id": 1,
@@ -108,8 +108,8 @@
       "category": "Dinner",
       "title": "Borscht",
       "description": "Chicken soup is a soup made with chicken as the primary ingredient. It is usually seasoned with salt, pepper, and other spices. Chicken soup is a staple food in many cultures, and is often served as a first course in formal dinners. It is also a common home remedy for colds and flu.",
-      "cooking_time": "90",
-      "difficulty": 1,
+      "cooking_time": 90,
+      "complexity": 1,
       "ingredients": [
         {
           "product_id": 1,
@@ -179,8 +179,8 @@
       "category": "Lunch",
       "title": "Pizza Margherita",
       "description": "Chicken soup is a soup made with chicken as the primary ingredient. It is usually seasoned with salt, pepper, and other spices. Chicken soup is a staple food in many cultures, and is often served as a first course in formal dinners. It is also a common home remedy for colds and flu.",
-      "cooking_time": "45",
-      "difficulty": 2,
+      "cooking_time": 45,
+      "complexity": 2,
       "ingredients": [
         {
           "product_id": 1,
@@ -238,8 +238,8 @@
       "category": "Breakfast",
       "title": "American pancakes",
       "description": "Chicken soup is a soup made with chicken as the primary ingredient. It is usually seasoned with salt, pepper, and other spices. Chicken soup is a staple food in many cultures, and is often served as a first course in formal dinners. It is also a common home remedy for colds and flu.",
-      "cooking_time": "30",
-      "difficulty": 1,
+      "cooking_time": 30,
+      "complexity": 1,
       "ingredients": [
         {
           "product_id": 1,
@@ -301,8 +301,8 @@
       "category": "Breakfast",
       "title": "Spanish eggs with chorizo & peppers",
       "description": "Chicken soup is a soup made with chicken as the primary ingredient. It is usually seasoned with salt, pepper, and other spices. Chicken soup is a staple food in many cultures, and is often served as a first course in formal dinners. It is also a common home remedy for colds and flu.",
-      "cooking_time": "120",
-      "difficulty": 3,
+      "cooking_time": 120,
+      "complexity": 3,
       "ingredients": [
         {
           "product_id": 1,
