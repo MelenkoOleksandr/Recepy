@@ -1,0 +1,395 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "username": "John Doe",
+      "email": "john@gmail.com",
+      "password": "password",
+      "fridge": [
+        {
+          "product_id": 1,
+          "amount": 400
+        },
+        {
+          "product_id": 2,
+          "amount": 10
+        },
+        {
+          "product_id": 3,
+          "amount": 10
+        },
+        {
+          "product_id": 4,
+          "amount": 200
+        },
+        {
+          "product_id": 5,
+          "amount": 200
+        }
+      ]
+    }
+  ],
+  "recipies": [
+    {
+      "id": 1,
+      "user_id": 1,
+      "img": "https://images.unsplash.com/photo-1607330289024-1535c6b4e1c1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8Y2hpY2tlbiUyMHNvdXB8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60",
+      "category": "Dinner",
+      "title": "Chicken Soup",
+      "description": "Chicken soup is a soup made with chicken as the primary ingredient. It is usually seasoned with salt, pepper, and other spices. Chicken soup is a staple food in many cultures, and is often served as a first course in formal dinners. It is also a common home remedy for colds and flu.",
+      "cooking_time": "60",
+      "difficulty": 2,
+      "ingredients": [
+        {
+          "product_id": 1,
+          "amount": 400
+        },
+        {
+          "product_id": 2,
+          "amount": 10
+        },
+        {
+          "product_id": 3,
+          "amount": 10
+        },
+        {
+          "product_id": 4,
+          "amount": 200
+        },
+        {
+          "product_id": 5,
+          "amount": 200
+        }
+      ],
+      "instructions": [
+        {
+          "description": "Boil chicken",
+          "img": "https://media.istockphoto.com/id/1062105606/photo/meat-is-cooked-in-a-saucepan.jpg?b=1&s=170667a&w=0&k=20&c=PW19062q7-Qmhe2FCFQ9Eo63L6h174T_0eb_D5mwSHQ="
+        },
+        {
+          "description": "Add salt",
+          "img": "https://media.istockphoto.com/id/1062105606/photo/meat-is-cooked-in-a-saucepan.jpg?b=1&s=170667a&w=0&k=20&c=PW19062q7-Qmhe2FCFQ9Eo63L6h174T_0eb_D5mwSHQ="
+        },
+        {
+          "description": "Add pepper",
+          "img": "https://media.istockphoto.com/id/1062105606/photo/meat-is-cooked-in-a-saucepan.jpg?b=1&s=170667a&w=0&k=20&c=PW19062q7-Qmhe2FCFQ9Eo63L6h174T_0eb_D5mwSHQ="
+        },
+        {
+          "description": "Add other spices",
+          "img": "https://media.istockphoto.com/id/1062105606/photo/meat-is-cooked-in-a-saucepan.jpg?b=1&s=170667a&w=0&k=20&c=PW19062q7-Qmhe2FCFQ9Eo63L6h174T_0eb_D5mwSHQ="
+        },
+        {
+          "description": "Add vegetables",
+          "img": "https://media.istockphoto.com/id/1062105606/photo/meat-is-cooked-in-a-saucepan.jpg?b=1&s=170667a&w=0&k=20&c=PW19062q7-Qmhe2FCFQ9Eo63L6h174T_0eb_D5mwSHQ="
+        },
+        {
+          "description": "Add noodles",
+          "img": "https://media.istockphoto.com/id/1062105606/photo/meat-is-cooked-in-a-saucepan.jpg?b=1&s=170667a&w=0&k=20&c=PW19062q7-Qmhe2FCFQ9Eo63L6h174T_0eb_D5mwSHQ="
+        },
+        {
+          "description": "Serve",
+          "img": "https://media.istockphoto.com/id/1062105606/photo/meat-is-cooked-in-a-sauce"
+        }
+      ],
+      "comments": [
+        {
+          "id": 1,
+          "user_id": 1,
+          "recipie_id": 1,
+          "comment": "This is a great recipie",
+          "created_at": "2020-03-01T00:00:00.000Z"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "user_id": 1,
+      "img": "https://images.unsplash.com/photo-1648726445011-9fbf3a5ddb90?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8Ym9yc2NodHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60",
+      "category": "Dinner",
+      "title": "Borscht",
+      "description": "Chicken soup is a soup made with chicken as the primary ingredient. It is usually seasoned with salt, pepper, and other spices. Chicken soup is a staple food in many cultures, and is often served as a first course in formal dinners. It is also a common home remedy for colds and flu.",
+      "cooking_time": "90",
+      "difficulty": 1,
+      "ingredients": [
+        {
+          "product_id": 1,
+          "amount": 400
+        },
+        {
+          "product_id": 2,
+          "amount": 10
+        },
+        {
+          "product_id": 3,
+          "amount": 10
+        },
+        {
+          "product_id": 4,
+          "amount": 200
+        },
+        {
+          "product_id": 5,
+          "amount": 200
+        }
+      ],
+      "instructions": [
+        {
+          "description": "Boil chicken",
+          "img": "https://media.istockphoto.com/id/1062105606/photo/meat-is-cooked-in-a-saucepan.jpg?b=1&s=170667a&w=0&k=20&c=PW19062q7-Qmhe2FCFQ9Eo63L6h174T_0eb_D5mwSHQ="
+        },
+        {
+          "description": "Add salt",
+          "img": "https://media.istockphoto.com/id/1062105606/photo/meat-is-cooked-in-a-saucepan.jpg?b=1&s=170667a&w=0&k=20&c=PW19062q7-Qmhe2FCFQ9Eo63L6h174T_0eb_D5mwSHQ="
+        },
+        {
+          "description": "Add pepper",
+          "img": "https://media.istockphoto.com/id/1062105606/photo/meat-is-cooked-in-a-saucepan.jpg?b=1&s=170667a&w=0&k=20&c=PW19062q7-Qmhe2FCFQ9Eo63L6h174T_0eb_D5mwSHQ="
+        },
+        {
+          "description": "Add other spices",
+          "img": "https://media.istockphoto.com/id/1062105606/photo/meat-is-cooked-in-a-saucepan.jpg?b=1&s=170667a&w=0&k=20&c=PW19062q7-Qmhe2FCFQ9Eo63L6h174T_0eb_D5mwSHQ="
+        },
+        {
+          "description": "Add vegetables",
+          "img": "https://media.istockphoto.com/id/1062105606/photo/meat-is-cooked-in-a-saucepan.jpg?b=1&s=170667a&w=0&k=20&c=PW19062q7-Qmhe2FCFQ9Eo63L6h174T_0eb_D5mwSHQ="
+        },
+        {
+          "description": "Add noodles",
+          "img": "https://media.istockphoto.com/id/1062105606/photo/meat-is-cooked-in-a-saucepan.jpg?b=1&s=170667a&w=0&k=20&c=PW19062q7-Qmhe2FCFQ9Eo63L6h174T_0eb_D5mwSHQ="
+        },
+        {
+          "description": "Serve",
+          "img": "https://media.istockphoto.com/id/1062105606/photo/meat-is-cooked-in-a-sauce"
+        }
+      ],
+      "comments": [
+        {
+          "id": 1,
+          "user_id": 1,
+          "recipie_id": 1,
+          "comment": "This is a great recipie",
+          "created_at": "2020-03-01T00:00:00.000Z"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "user_id": 1,
+      "img": "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/recipe-image-legacy-id-51643_11-2f4a2cc.jpg?quality=90&webp=true&resize=300,272",
+      "category": "Lunch",
+      "title": "Pizza Margherita",
+      "description": "Chicken soup is a soup made with chicken as the primary ingredient. It is usually seasoned with salt, pepper, and other spices. Chicken soup is a staple food in many cultures, and is often served as a first course in formal dinners. It is also a common home remedy for colds and flu.",
+      "cooking_time": "45",
+      "difficulty": 2,
+      "ingredients": [
+        {
+          "product_id": 1,
+          "amount": 400
+        },
+        {
+          "product_id": 2,
+          "amount": 10
+        },
+        {
+          "product_id": 3,
+          "amount": 10
+        },
+        {
+          "product_id": 4,
+          "amount": 200
+        },
+        {
+          "product_id": 5,
+          "amount": 200
+        }
+      ],
+      "instructions": [
+        {
+          "description": "Make the base: Put the flour into a large bowl, then stir in the yeast and salt. Make a well, pour in 200ml warm water and the olive oil and bring together with a wooden spoon until you have a soft, fairly wet dough. Turn onto a lightly floured surface and knead for 5 mins until smooth. Cover with a tea towel and set aside. You can leave the dough to rise if you like, but it’s not essential for a thin crust.",
+          "img": "https://media.istockphoto.com/id/1062105606/photo/meat-is-cooked-in-a-saucepan.jpg?b=1&s=170667a&w=0&k=20&c=PW19062q7-Qmhe2FCFQ9Eo63L6h174T_0eb_D5mwSHQ="
+        },
+        {
+          "description": "Make the sauce: Mix the passata, basil and crushed garlic together, then season to taste. Leave to stand at room temperature while you get on with shaping the base.",
+          "img": "https://media.istockphoto.com/id/1062105606/photo/meat-is-cooked-in-a-saucepan.jpg?b=1&s=170667a&w=0&k=20&c=PW19062q7-Qmhe2FCFQ9Eo63L6h174T_0eb_D5mwSHQ="
+        },
+        {
+          "description": "Roll out the dough: if you’ve let the dough rise, give it a quick knead, then split into two balls. On a floured surface, roll out the dough into large rounds, about 25cm across, using a rolling pin. The dough needs to be very thin as it will rise in the oven. Lift the rounds onto two floured baking sheets.",
+          "img": "https://media.istockphoto.com/id/1062105606/photo/meat-is-cooked-in-a-saucepan.jpg?b=1&s=170667a&w=0&k=20&c=PW19062q7-Qmhe2FCFQ9Eo63L6h174T_0eb_D5mwSHQ="
+        },
+        {
+          "description": "Top and bake: heat the oven to 240C/220C fan/gas 8. Put another baking sheet or an upturned baking tray in the oven on the top shelf. Smooth sauce over bases with the back of a spoon. Scatter with cheese and tomatoes, drizzle with olive oil and season. Put one pizza, still on its baking sheet, on top of the preheated sheet or tray. Bake for 8-10 mins until crisp. Serve with a little more olive oil, and basil leaves if using. Repeat step for remaining pizza.",
+          "img": "https://media.istockphoto.com/id/1062105606/photo/meat-is-cooked-in-a-saucepan.jpg?b=1&s=170667a&w=0&k=20&c=PW19062q7-Qmhe2FCFQ9Eo63L6h174T_0eb_D5mwSHQ="
+        }
+      ],
+      "comments": [
+        {
+          "id": 1,
+          "user_id": 1,
+          "recipie_id": 1,
+          "comment": "This is a great recipie",
+          "created_at": "2020-03-01T00:00:00.000Z"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "user_id": 1,
+      "img": "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/american-style-pancakes-87119e3.jpg?quality=90&webp=true&resize=300,272",
+      "category": "Breakfast",
+      "title": "American pancakes",
+      "description": "Chicken soup is a soup made with chicken as the primary ingredient. It is usually seasoned with salt, pepper, and other spices. Chicken soup is a staple food in many cultures, and is often served as a first course in formal dinners. It is also a common home remedy for colds and flu.",
+      "cooking_time": "30",
+      "difficulty": 1,
+      "ingredients": [
+        {
+          "product_id": 1,
+          "amount": 400
+        },
+        {
+          "product_id": 2,
+          "amount": 10
+        },
+        {
+          "product_id": 3,
+          "amount": 10
+        },
+        {
+          "product_id": 4,
+          "amount": 200
+        },
+        {
+          "product_id": 5,
+          "amount": 200
+        }
+      ],
+      "instructions": [
+        {
+          "description": "Mix 200g self-raising flour, 1 ½ tsp baking powder, 1 tbsp golden caster sugar and a pinch of salt together in a large bowl.",
+          "img": "https://media.istockphoto.com/id/1062105606/photo/meat-is-cooked-in-a-saucepan.jpg?b=1&s=170667a&w=0&k=20&c=PW19062q7-Qmhe2FCFQ9Eo63L6h174T_0eb_D5mwSHQ="
+        },
+        {
+          "description": "Create a well in the centre with the back of your spoon then add 3 large eggs, 25g melted butter and 200ml milk.",
+          "img": "https://media.istockphoto.com/id/1062105606/photo/meat-is-cooked-in-a-saucepan.jpg?b=1&s=170667a&w=0&k=20&c=PW19062q7-Qmhe2FCFQ9Eo63L6h174T_0eb_D5mwSHQ="
+        },
+        {
+          "description": "Whisk together either with a balloon whisk or electric hand beaters until smooth then pour into a jug.",
+          "img": "https://media.istockphoto.com/id/1062105606/photo/meat-is-cooked-in-a-saucepan.jpg?b=1&s=170667a&w=0&k=20&c=PW19062q7-Qmhe2FCFQ9Eo63L6h174T_0eb_D5mwSHQ="
+        },
+        {
+          "description": "Heat a small knob of butter and 1 tsp of oil in a large, non-stick frying pan over a medium heat. When the butter looks frothy, pour in rounds of the batter, approximately 8cm wide. Make sure you don’t put the pancakes too close together as they will spread during cooking. Cook the pancakes on one side for about 1-2 mins or until lots of tiny bubbles start to appear and pop on the surface. Flip the pancakes over and cook for a further minute on the other side. Repeat until all the batter is used up.",
+          "img": "https://media.istockphoto.com/id/1062105606/photo/meat-is-cooked-in-a-saucepan.jpg?b=1&s=170667a&w=0&k=20&c=PW19062q7-Qmhe2FCFQ9Eo63L6h174T_0eb_D5mwSHQ="
+        },
+        {
+          "description": "Serve your pancakes stacked up on a plate with a drizzle of maple syrup and any of your favourite toppings.",
+          "img": "https://media.istockphoto.com/id/1062105606/photo/meat-is-cooked-in-a-saucepan.jpg?b=1&s=170667a&w=0&k=20&c=PW19062q7-Qmhe2FCFQ9Eo63L6h174T_0eb_D5mwSHQ="
+        }
+      ],
+      "comments": [
+        {
+          "id": 1,
+          "user_id": 1,
+          "recipie_id": 1,
+          "comment": "This is a great recipie",
+          "created_at": "2020-03-01T00:00:00.000Z"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "user_id": 1,
+      "img": "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/hash-5094596.jpg?quality=90&webp=true&resize=300,272",
+      "category": "Breakfast",
+      "title": "Spanish eggs with chorizo & peppers",
+      "description": "Chicken soup is a soup made with chicken as the primary ingredient. It is usually seasoned with salt, pepper, and other spices. Chicken soup is a staple food in many cultures, and is often served as a first course in formal dinners. It is also a common home remedy for colds and flu.",
+      "cooking_time": "120",
+      "difficulty": 3,
+      "ingredients": [
+        {
+          "product_id": 1,
+          "amount": 400
+        },
+        {
+          "product_id": 2,
+          "amount": 10
+        },
+        {
+          "product_id": 3,
+          "amount": 10
+        },
+        {
+          "product_id": 4,
+          "amount": 200
+        },
+        {
+          "product_id": 5,
+          "amount": 200
+        }
+      ],
+      "instructions": [
+        {
+          "description": "Steam the potatoes for 15-20 mins or until cooked.",
+          "img": "https://media.istockphoto.com/id/1062105606/photo/meat-is-cooked-in-a-saucepan.jpg?b=1&s=170667a&w=0&k=20&c=PW19062q7-Qmhe2FCFQ9Eo63L6h174T_0eb_D5mwSHQ="
+        },
+        {
+          "description": "Heat 1 tbsp oil in a non-stick pan. Add the onions and peppers, then cook for about 10 mins until soft. Push the peppers to the side of the pan and add the chorizo, sizzling until cooked though and releasing its oils. Transfer to a plate.",
+          "img": "https://media.istockphoto.com/id/1062105606/photo/meat-is-cooked-in-a-saucepan.jpg?b=1&s=170667a&w=0&k=20&c=PW19062q7-Qmhe2FCFQ9Eo63L6h174T_0eb_D5mwSHQ="
+        },
+        {
+          "description": "Once cool enough, halve the potatoes. Heat 1 tbsp oil in another non-stick pan and tip in the spuds. Fry for about 10 mins until golden and beginning to crisp. Stir in the onion mix, heat through and season.",
+          "img": "https://media.istockphoto.com/id/1062105606/photo/meat-is-cooked-in-a-saucepan.jpg?b=1&s=170667a&w=0&k=20&c=PW19062q7-Qmhe2FCFQ9Eo63L6h174T_0eb_D5mwSHQ="
+        },
+        {
+          "description": "Meanwhile, in the onion pan, fry the eggs to your liking. Place them on top of everything, allowing 1 egg per person.",
+          "img": "https://media.istockphoto.com/id/1062105606/photo/meat-is-cooked-in-a-saucepan.jpg?b=1&s=170667a&w=0&k=20&c=PW19062q7-Qmhe2FCFQ9Eo63L6h174T_0eb_D5mwSHQ="
+        }
+      ],
+      "comments": [
+        {
+          "id": 1,
+          "user_id": 1,
+          "recipie_id": 1,
+          "comment": "This is a great recipie",
+          "created_at": "2020-03-01T00:00:00.000Z"
+        }
+      ]
+    }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "category": "Meat",
+      "name": "Chicken",
+      "img": "https://media.istockphoto.com/id/1062105606/photo/meat-is-cooked-in-a-saucepan.jpg?b=1&s=170667a&w=0&k=20&c=PW19062q7-Qmhe2FCFQ9Eo63L6h174T_0eb_D5mwSHQ="
+    },
+    {
+      "id": 2,
+      "category": "Spices",
+      "name": "Salt",
+      "img": "https://media.istockphoto.com/id/1062105606/photo/meat-is-cooked-in-a-saucepan.jpg?b=1&s=170667a&w=0&k=20&c=PW19062q7-Qmhe2FCFQ9Eo63L6h174T_0eb_D5mwSHQ="
+    },
+    {
+      "id": 3,
+      "category": "Spices",
+      "name": "Pepper",
+      "img": "https://media.istockphoto.com/id/1062105606/photo/meat-is-cooked-in-a-saucepan.jpg?b=1&s=170667a&w=0&k=20&c=PW19062q7-Qmhe2FCFQ9Eo63L6h174T_0eb_D5mwSHQ="
+    },
+    {
+      "id": 4,
+      "category": "Vegetables",
+      "name": "Tomatoes",
+      "img": "https://media.istockphoto.com/id/1062105606/photo/meat-is-cooked-in-a-saucepan.jpg?b=1&s=170667a&w=0&k=20&c=PW19062q7-Qmhe2FCFQ9Eo63L6h174T_0eb_D5mwSHQ="
+    },
+    {
+      "id": 5,
+      "category": "Vegetables",
+      "name": "Carrots",
+      "img": "https://media.istockphoto.com/id/1062105606/photo/meat-is-cooked-in-a-saucepan.jpg?b=1&s=170667a&w=0&k=20&c=PW19062q7-Qmhe2FCFQ9Eo63L6h174T_0eb_D5mwSHQ="
+    },
+    {
+      "id": 6,
+      "category": "Noodles",
+      "name": "Noodles",
+      "img": "https://media.istockphoto.com/id/1062105606/photo/meat-is-cooked-in-a-saucepan.jpg?b=1&s=170667a&w=0&k=20&c=PW19062q7-Qmhe2FCFQ9Eo63L6h174T_0eb_D5mwSHQ="
+    }
+  ]
+}
