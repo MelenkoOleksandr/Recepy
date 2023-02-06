@@ -346,8 +346,8 @@
       "comments": [
         {
           "id": 1,
-          "user_id": 1,
-          "recipie_id": 1,
+          "userId": 1,
+          "recipyId": 1,
           "comment": "This is a great recipie",
           "created_at": "2020-03-01T00:00:00.000Z"
         }

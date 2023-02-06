@@ -1,8 +1,14 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { Link, useNavigate } from "react-router-dom";
+import { login } from "../../redux/slices/auth";
 import "./Auth.css";
 
 const Login = () => {
+  const { user, error } = useSelector((state) => state.auth);
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+
   const [fields, setFields] = useState({
     email: "",
     password: "",
@@ -10,8 +16,12 @@ const Login = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(fields);
+    dispatch(login(fields))
   };
+
+  if (user) {
+    navigate("/");
+  }
 
   return (
     <form className="auth-form" onSubmit={handleSubmit}>
