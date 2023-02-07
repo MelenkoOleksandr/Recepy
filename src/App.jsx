@@ -6,8 +6,17 @@ import Recipy from "./pages/Recipy/Recipy";
 import Fridge from "./pages/Fridge/Fridge";
 import Profile from "./pages/Profile/Profile";
 import MainLayout from "./layout/MainLayout";
+import { useEffect } from "react";
+import { loadData } from "./redux/slices/auth";
+import { useDispatch } from "react-redux";
 
 function App() {
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(loadData())
+  }, [])
+  
   return (
     <div className="app">
       <Routes>

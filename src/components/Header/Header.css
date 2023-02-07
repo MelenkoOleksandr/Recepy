@@ -61,3 +61,17 @@
     border-radius: 50%;
     object-fit: cover;
 }
+
+.header .logout-btn {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #fff;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}

@@ -34,7 +34,7 @@ export const authSlice = createSlice({
     extraReducers: (builder) => {
         builder
             .addCase(login.fulfilled, (state, action) => {
-                localStorage.setItem('user', action.payload);
+                localStorage.setItem('user', JSON.stringify(action.payload));
                 state.user = action.payload;
                 state.loading = false;
                 state.error = "";

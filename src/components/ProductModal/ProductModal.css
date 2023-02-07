@@ -1,0 +1,86 @@
+.product-modal {
+    padding: 50px;
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.search {
+    max-width: 500px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #ccc;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+.form-control {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.form-control label {
+    font-size: 24px;
+}
+
+.form-control input {
+    max-width: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #ccc;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+.buttons {
+    display: flex;
+
+    align-items: center;
+    gap: 20px;
+}
+
+.add-btn {
+    max-width: 200px;
+    padding: 10px 20px;
+    font-size: 18px;
+    font-weight: 700;
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(34, 142, 37);
+    color: #fff;
+    cursor: pointer;
+}
+
+.cancel-btn {
+    max-width: 200px;
+    padding: 10px 20px;
+    font-size: 18px;
+    font-weight: 700;
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(205, 74, 48);
+    color: #fff;
+    cursor: pointer;
+}
+
+.product-modal .product-card {
+    height: 75px;
+    box-shadow: 0 2px 8px rgb(0 0 0 / 26%);
+}
+
+.product-modal .product-card.selected {
+    box-shadow: 0 2px 8px rgba(17, 205, 23, 0.26);
+}

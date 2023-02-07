@@ -1,28 +1,26 @@
-// Page for the recipy
-// It must contain the list of ingredients and the steps to follow
-// Need to show insufficient products depending on the fridge
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import "./Recipy.css";
 import { parseTime } from "./../../utils/parseTime";
 import Complexity from "../../components/Complexity/Complexity";
+import { useDispatch, useSelector } from "react-redux";
+import { getRecipy } from "../../redux/slices/recipy";
+import "./Recipy.css";
+import { getFridge } from "../../redux/slices/fridge";
+import Ingredient from "../../components/Ingredient/Ingredient";
+import { findProductInFridge } from "./../../utils/products";
 
 const Recipy = () => {
-  const [recipy, setRecipy] = useState(null);
+  const dispatch = useDispatch();
+  const { recipy, loading } = useSelector((state) => state.recipy);
+  const { products } = useSelector((state) => state.fridge);
   const { recipyId } = useParams();
 
   useEffect(() => {
-    const getRecipy = async () => {
-      const response = await fetch(
-        `http://localhost:8080/recipies/${recipyId}`
-      );
-      const data = await response.json();
-      setRecipy(data);
-    };
-    getRecipy();
+    dispatch(getFridge());
+    dispatch(getRecipy(recipyId));
   }, [recipyId]);
 
-  if (!recipy) {
+  if (loading || !recipy) {
     return <h1>Loading...</h1>;
   }
 
@@ -34,50 +32,49 @@ const Recipy = () => {
         </div>
         <div className="recipy-page-info">
           <h2 className="recipy-title">{recipy.title}</h2>
-          <h3 className="recipy-info-item">
+          <div className="recipy-info-item">
             <span className="recipy-field">Chef</span>
-            <span className="recipy-value">Alex</span>
-          </h3>
-          <h3 className="recipy-info-item">
+            <span className="recipy-value">{recipy.user.username}</span>
+          </div>
+          <div className="recipy-info-item">
             <span className="recipy-field">Cooking Time</span>
             <span className="recipy-value">
-              {parseTime(recipy.cooking_time)}
+              {parseTime(recipy.cookingTime)}
             </span>
-          </h3>
-          <h3 className="recipy-info-item">
+          </div>
+          <div className="recipy-info-item">
             <span className="recipy-field">Difficulty</span>
             <Complexity complexity={recipy.complexity} />
-          </h3>
+          </div>
         </div>
       </section>
       <section className="ingredients">
         <h2 className="ingredients-title">Ingredients</h2>
-        <div className="show-possible">
-          <input type="checkbox" id="show-possible" />
-          <label htmlFor="show-possible">Show possible ingredients</label>
-        </div>
         <div className="ingredients-list">
           {recipy.ingredients.map((ingredient) => (
-            <div className="ingredient not-available" key={ingredient.id}>
-              <div className="ingredient-name">Tomato</div>
-              <div className="ingredient-quantity">{ingredient.amount}g</div>
-            </div>
+            <Ingredient
+              ingredient={ingredient}
+              ingredientInFridge={findProductInFridge(products, ingredient)}
+              key={ingredient._id}
+            />
           ))}
         </div>
       </section>
       <section className="steps">
         <h3 className="steps-title">Steps</h3>
         {recipy.instructions.map((instruction, index) => (
-          <div className="step">
+          <div className="step" key={instruction._id}>
             <div className="step-info">
               <div className="step-number">Step {index + 1}</div>
               <p className="step-desc">{instruction.description}</p>
             </div>
-            <img
-              src="https://images.unsplash.com/photo-1619957666015-50503839e961?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
-              alt=""
-              className="step-img"
-            />
+            {instruction.img && (
+              <img
+                src="https://images.unsplash.com/photo-1619957666015-50503839e961?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+                alt=""
+                className="step-img"
+              />
+            )}
           </div>
         ))}
       </section>

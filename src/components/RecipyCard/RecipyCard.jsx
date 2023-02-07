@@ -11,7 +11,7 @@ const RecipyCard = ({ recipy, chef }) => {
   const [saved, setSaved] = useState(false);
 
   return (
-    <Link to={`/recipy/${recipy.id}`} className="recipy">
+    <Link to={`/recipy/${recipy._id}`} className="recipy">
       {!saved ? (
         <BsBookmarkStar className="saved" />
       ) : (
@@ -24,11 +24,11 @@ const RecipyCard = ({ recipy, chef }) => {
         <div className="recipy-info-left">
           <h4 className="recipy-title">{recipy.title}</h4>
           <h5 className="recipy-chef">
-            <span>By</span> {chef.username}
+            <span>By</span> <Link to={`/profile`}>{chef.username}</Link>
           </h5>
           <h5 className="recipy-time">
             <BiTimeFive className="time-icon" />
-            <span className="time">{parseTime(recipy.cooking_time)} </span>
+            <span className="time">{parseTime(recipy.cookingTime)} </span>
           </h5>
         </div>
         <div className="recipy-info-right">

@@ -3,10 +3,17 @@ import { Link } from "react-router-dom";
 import { BiLogIn } from "react-icons/bi";
 import { RiFridgeFill } from "react-icons/ri";
 import "./Header.css";
+import { useDispatch, useSelector } from "react-redux";
+import { logout } from "../../redux/slices/auth";
 
 
 const Header = () => {
-  const [user, setUser] = useState(true);
+  const dispatch = useDispatch();
+  const { user } = useSelector((state) => state.auth);
+  
+  const handleLogout = () => {
+    dispatch(logout())
+  }
 
   return (
     <header className="header">
@@ -27,17 +34,20 @@ const Header = () => {
                 <li className="navigation-item">
                   <Link to="/profile" className="navigation-link">
                     <img
-                      src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80"
+                      src={user.img || "https://i.imgur.com/0Hwz9uB.png"}
                       alt="user"
                       className="user-image"
                     />
-                    Username
+                    {user.username}
                   </Link>
                 </li>
                 <li className="navigation-item">
                   <Link to="/fridge" className="navigation-link">
                     <RiFridgeFill /> Fridge
                   </Link>
+                </li>
+                <li className="navigation-item">
+                  <button onClick={handleLogout} className="logout-btn">Logout</button>
                 </li>
               </>
             )}

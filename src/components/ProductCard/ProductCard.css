@@ -25,7 +25,7 @@
     object-fit: cover;
 }
 
-.category-icon {
+.remove-btn {
     position: absolute;
     top: 5px;
     right: 5px;
@@ -59,4 +59,12 @@
     font-size: 18px;
     font-weight: 700;
     color: #000;
+}
+
+input.product-quantity {
+    width: 75px;
+    height: 30px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center;
 }
