@@ -1,24 +1,37 @@
 import { Route, Routes } from "react-router-dom";
-import Login from "./pages/Login";
-import Register from './pages/Register';
-import Home from './pages/Home';
-import Recepy from "./pages/Recepy";
-import Fridge from './pages/Fridge';
-import Header from "./components/Header";
+import Login from "./pages/Auth/Login";
+import Register from "./pages/Auth/Register";
+import Home from "./pages/Home/Home";
+import Recipy from "./pages/Recipy/Recipy";
+import Fridge from "./pages/Fridge/Fridge";
+import Profile from "./pages/Profile/Profile";
+import MainLayout from "./layout/MainLayout";
+import { useEffect } from "react";
+import { loadData } from "./redux/slices/auth";
+import { useDispatch } from "react-redux";
+import NewRecipy from "./pages/NewRecipy/NewRecipy";
 
 function App() {
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(loadData())
+  }, [])
+  
   return (
     <div className="app">
-      <Header />
-      <div className="container">
-        <Routes>
+      <Routes>
+        <Route element={<MainLayout />}>
           <Route path="/" element={<Home />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/register" element={<Register />} />
           <Route path="/fridge" element={<Fridge />} />
-          <Route path="/recepy" element={<Recepy />} />
-        </Routes>
-      </div>
+          <Route path="/new-recipy" element={<NewRecipy />} />
+          <Route path="/recipy/:recipyId" element={<Recipy />} />
+          <Route path="/profile" element={<Profile />} />
+          <Route path="*" element={<h1>404</h1>} />
+        </Route>
+        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
+      </Routes>
     </div>
   );
 }

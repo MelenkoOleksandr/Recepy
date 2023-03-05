@@ -1,0 +1,117 @@
+.recipy {
+    position: relative;
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    padding: 0px;
+    margin: 10px;
+    transition: all 0.3s ease-in-out;
+}
+
+.recipy .saved {
+    position: absolute;
+    top: 0px;
+    right: 5px;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: #fff;
+}
+
+.recipy .recipy-image {
+    width: 100%;
+    height: 200px;
+}
+
+.recipy .recipy-image>img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px 10px 0px 0px;
+    object-fit: cover;
+}
+
+.recipy-info {
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+}
+
+.recipy-info-left {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+}
+
+.recipy-info .recipy-title {
+    font-size: 20px;
+    font-weight: 600;
+    color: #000;
+}
+
+.recipy-info .recipy-chef {
+    font-size: 16px;
+    font-weight: 400;
+    color: #000;
+}
+
+.recipy-chef span {
+    font-weight: 600;
+    color: #000;
+}
+
+.recipy-time {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.recipy-time .time {
+    font-size: 16px;
+    font-weight: 400;
+    color: #000;
+}
+
+.recipy-time .time-icon {
+    width: 20px;
+    height: 20px;
+}
+
+.recipy-info-right {
+    align-self: flex-end;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.recipy-rating {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.recipy-rating .rating {
+    font-size: 16px;
+    font-weight: 400;
+    color: #000;
+}
+
+.recipy-rating .rating-icon {
+    width: 20px;
+    height: 20px;
+}
+

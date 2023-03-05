@@ -1,0 +1,172 @@
+.recipy-page {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.recipy-page .recipy-info-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+}
+
+.recipy-page .recipy-img-wrapper {
+    flex: 1;
+}
+
+.recipy-page .recipy-img {
+    max-height: 350px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.recipy-page .recipy-page-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.recipy-page-info .recipy-title {
+    font-size: 40px;
+    font-weight: 600;
+}
+
+.recipy-info-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.recipy-page-info .recipy-info-item .recipy-field {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.recipy-page-info .recipy-info-item .recipy-value {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.ingredients {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.ingredients-title {
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.ingredients .show-possible {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.ingredients-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.ingredient {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.ingredient .ingredient-name {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.ingredient .ingredient-quantity {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.not-available {
+    color: #ff0000;
+}
+
+.steps {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.steps-title {
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.step {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.step-info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    
+}
+
+.step-number {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.step-img {
+    max-width: 400px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.step-desc {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.comments {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.comment {
+    max-width: 1000px;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.comment>img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.comment-info {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-right: auto;
+}
+.comment-text {
+    max-width: 700px;
+    font-size: 18px;
+    font-weight: 500;
+}
