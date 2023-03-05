@@ -9,6 +9,7 @@ import MainLayout from "./layout/MainLayout";
 import { useEffect } from "react";
 import { loadData } from "./redux/slices/auth";
 import { useDispatch } from "react-redux";
+import NewRecipy from "./pages/NewRecipy/NewRecipy";
 
 function App() {
   const dispatch = useDispatch();
@@ -23,6 +24,7 @@ function App() {
         <Route element={<MainLayout />}>
           <Route path="/" element={<Home />} />
           <Route path="/fridge" element={<Fridge />} />
+          <Route path="/new-recipy" element={<NewRecipy />} />
           <Route path="/recipy/:recipyId" element={<Recipy />} />
           <Route path="/profile" element={<Profile />} />
           <Route path="*" element={<h1>404</h1>} />

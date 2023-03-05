@@ -8,15 +8,15 @@ import Complexity from "../Complexity/Complexity";
 import { parseTime } from "../../utils/parseTime";
 
 const RecipyCard = ({ recipy, chef }) => {
-  const [saved, setSaved] = useState(false);
+  // const [saved, setSaved] = useState(false);
 
   return (
     <Link to={`/recipy/${recipy._id}`} className="recipy">
-      {!saved ? (
+      {/* {!saved ? (
         <BsBookmarkStar className="saved" />
       ) : (
         <BsBookmarkStarFill className="saved" />
-      )}
+      )} */}
       <div className="recipy-image">
         <img src={recipy.img} alt="recipy" />
       </div>

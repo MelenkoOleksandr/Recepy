@@ -3,7 +3,7 @@ import axios from "axios";
 const api = axios.create({
     baseURL: "http://localhost:3000/api",
     headers: {
-        "Authorization": `Bearer ${JSON.parse(localStorage.getItem("user")).token}`,
+        "Authorization": `Bearer ${JSON.parse(localStorage.getItem("user"))?.token}`,
         "Content-Type": "application/json",
         Accept: "application/json",
     },
@@ -47,5 +47,15 @@ export const deleteProductFromFridge = async (id) => {
 
 export const updateProductQuantity = async (id, quantity) => {
     const response = await api.put(`/products/fridge/${id}`, {quantity});
+    return response;
+}
+
+export const fetchProductCategories = async () => {
+    const response = await api.get("/productCategories");
+    return response;
+}
+
+export const fetchRecipyCategories = async () => {
+    const response = await api.get("/recipyCategories");
     return response;
 }

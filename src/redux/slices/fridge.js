@@ -20,6 +20,10 @@ export const fridgeSlice = createSlice({
         removeProduct: (state, action) => {
             console.log(action.payload);
             state.products = state.products.filter((product) => product.id !== action.payload);
+        },
+        updateProductQuantity: (state, action) => {
+            const product = state.products.find((product) => product.id === action.payload.id);
+            product.quantity = action.payload.quantity;
         }
     },
     extraReducers: (builder) => {
@@ -38,6 +42,6 @@ export const fridgeSlice = createSlice({
     }
 });
 
-export const { addProduct, removeProduct } = fridgeSlice.actions;
+export const { addProduct, removeProduct, updateProductQuantity } = fridgeSlice.actions;
 
 export default fridgeSlice.reducer;

@@ -3,11 +3,16 @@ import { useDispatch, useSelector } from "react-redux";
 import Filters from "../../components/Filters/Filters";
 import RecipyCard from "../../components/RecipyCard/RecipyCard";
 import { getRecipies } from "../../redux/slices/recipies";
+import { getAllRecipyCategories } from "../../redux/slices/recipyCategories";
+import { getRecipiesThatUserCanPrepare } from "../../utils/products";
 import "./Home.css";
 
 const Home = () => {
   const dispatch = useDispatch();
   const { recipies } = useSelector((state) => state.recipies);
+  const { recipyCategories } = useSelector((state) => state.recipyCategories);
+  const { user } = useSelector((state) => state.auth);
+  const { products } = useSelector((state) => state.fridge);
 
   const [filters, setFilters] = useState({
     input: "",
@@ -18,10 +23,14 @@ const Home = () => {
   });
 
   useEffect(() => {
+    dispatch(getAllRecipyCategories());
     dispatch(getRecipies());
   }, []);
 
-  let filteredRecipes = recipies;
+  useEffect(() => {
+  }, [filters]);
+
+  let filteredRecipes = [...recipies];
 
   if (recipies.length > 0) {
     if (filters.input) {
@@ -32,7 +41,7 @@ const Home = () => {
 
     if (filters.category !== "All") {
       filteredRecipes = filteredRecipes.filter(
-        (recipy) => recipy.category === filters.category
+        (recipy) => recipy.categoryId === filters.category
       );
     }
 
@@ -43,22 +52,28 @@ const Home = () => {
     }
 
     if (filters.time) {
+     
       filteredRecipes = filteredRecipes.sort(
-        (a, b) => a.cooking_time - b.cooking_time
-      );
+        (a, b) => a.cookingTime - b.cookingTime
+      )
+    }
+
+    if (filters.ingredients) {
+      filteredRecipes = getRecipiesThatUserCanPrepare(recipies, products);
     }
   }
   return (
     <div className="home">
-      <Filters filters={filters} setFilters={setFilters} />
+      <Filters
+        recipyCategories={recipyCategories}
+        filters={filters}
+        setFilters={setFilters}
+        isAuth={!!user}
+      />
       <div className="recipes">
         {filteredRecipes.length > 0 &&
           filteredRecipes.map((recipy) => (
-            <RecipyCard
-              key={recipy.id}
-              recipy={recipy}
-              chef={recipy.user}
-            />
+            <RecipyCard key={recipy._id} recipy={recipy} chef={recipy.user} />
           ))}
       </div>
     </div>

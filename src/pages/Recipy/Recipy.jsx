@@ -70,7 +70,7 @@ const Recipy = () => {
             </div>
             {instruction.img && (
               <img
-                src="https://images.unsplash.com/photo-1619957666015-50503839e961?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+                src={instruction.img}
                 alt=""
                 className="step-img"
               />
@@ -78,7 +78,7 @@ const Recipy = () => {
           </div>
         ))}
       </section>
-      <section className="comments">
+      {/* <section className="comments">
         <h2 className="comments-title">Comments</h2>
         <div className="comments-wrapper">
           <div className="comment">
@@ -97,7 +97,7 @@ const Recipy = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
     </div>
   );
 };

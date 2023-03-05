@@ -1,11 +1,6 @@
-// Sort by the complexity of recipes
-// Filter by the selected ingredients
-// Filter by the time to prepare
-// If user is logged in, filter by the products in the fridge
-import { AiOutlineSearch } from "react-icons/ai";
 import "./Filters.css";
 
-const Filters = ({ filters, setFilters }) => {
+const Filters = ({ filters, setFilters, recipyCategories, isAuth }) => {
   const handleInputChange = (e) => {
     setFilters({ ...filters, input: e.target.value });
   };
@@ -35,7 +30,6 @@ const Filters = ({ filters, setFilters }) => {
           type="text"
           placeholder="Enter your recipy name, ingredients, etc..."
         />
-        {/* <AiOutlineSearch /> */}
       </div>
       <div className="category-wrapper">
         <label htmlFor="category">Category</label>
@@ -46,11 +40,11 @@ const Filters = ({ filters, setFilters }) => {
           value={filters.category}
         >
           <option value="All">All</option>
-          <option value="Breakfast">Breakfast</option>
-          <option value="Lunch">Lunch</option>
-          <option value="Dinner">Dinner</option>
-          <option value="Dessert">Dessert</option>
-          <option value="Snack">Snack</option>
+          {recipyCategories.map((category) => (
+            <option key={category._id} value={category._id}>
+              {category.name}
+            </option>
+          ))}
         </select>
       </div>
       <div className="filters">
@@ -70,14 +64,16 @@ const Filters = ({ filters, setFilters }) => {
             checked={filters.time}
           />
         </div>
-        <div className="filter">
-          <label htmlFor="ingredients">Have all products</label>
-          <input
-            type="checkbox"
-            onChange={handleIngredientsChange}
-            checked={filters.ingredients}
-          />
-        </div>
+        {isAuth && (
+          <div className="filter">
+            <label htmlFor="ingredients">Have all products</label>
+            <input
+              type="checkbox"
+              onChange={handleIngredientsChange}
+              checked={filters.ingredients}
+            />
+          </div>
+        )}
       </div>
     </div>
   );
